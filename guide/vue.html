@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue类 | thefunpower开发包</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.73d0500b.css" as="style"><link rel="preload" href="/assets/js/app.2c43ba1f.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/18.bc175b9f.js" as="script"><link rel="prefetch" href="/assets/js/10.9f361f6a.js"><link rel="prefetch" href="/assets/js/11.fefc3b14.js"><link rel="prefetch" href="/assets/js/12.c1fb7680.js"><link rel="prefetch" href="/assets/js/13.91fa5cd3.js"><link rel="prefetch" href="/assets/js/14.61993363.js"><link rel="prefetch" href="/assets/js/15.3b1194d9.js"><link rel="prefetch" href="/assets/js/16.fb54048b.js"><link rel="prefetch" href="/assets/js/17.d6a8fc89.js"><link rel="prefetch" href="/assets/js/19.38f82786.js"><link rel="prefetch" href="/assets/js/3.3d676ef7.js"><link rel="prefetch" href="/assets/js/4.832274fd.js"><link rel="prefetch" href="/assets/js/5.e457cf98.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.159f2f50.js"><link rel="prefetch" href="/assets/js/8.2099743c.js"><link rel="prefetch" href="/assets/js/9.6a63ad8e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.73d0500b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">thefunpower开发包</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发手册</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">入门</a></li><li><a href="/guide/database.html" class="sidebar-link">数据库</a></li><li><a href="/guide/vue.html" aria-current="page" class="active sidebar-link">Vue类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/vue.html#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/guide/vue.html#定义data" class="sidebar-link">定义data</a></li><li class="sidebar-sub-header"><a href="/guide/vue.html#定义方法" class="sidebar-link">定义方法</a></li><li class="sidebar-sub-header"><a href="/guide/vue.html#mounted" class="sidebar-link">mounted</a></li><li class="sidebar-sub-header"><a href="/guide/vue.html#watch" class="sidebar-link">watch</a></li><li class="sidebar-sub-header"><a href="/guide/vue.html#分页、添加、编辑" class="sidebar-link">分页、添加、编辑</a></li><li class="sidebar-sub-header"><a href="/guide/vue.html#自定义add-editor操作js" class="sidebar-link">自定义add editor操作JS</a></li><li class="sidebar-sub-header"><a href="/guide/vue.html#dialog" class="sidebar-link">dialog</a></li></ul></li><li><a href="/guide/validate.html" class="sidebar-link">数据验证</a></li><li><a href="/guide/aes.html" class="sidebar-link">加密解密</a></li><li><a href="/guide/cmd.html" class="sidebar-link">命令行</a></li><li><a href="/guide/sortable.html" class="sidebar-link">sortable</a></li><li><a href="/guide/composer.html" class="sidebar-link">composer</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue类"><a href="#vue类" class="header-anchor">#</a> Vue类</h1> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language- extra-class"><pre class="language-text"><code>$vue = new Vue;
+$vue-&gt;data(&quot;object&quot;,&quot;js:{}&quot;);
+$vue-&gt;data(&quot;array&quot;,&quot;js:[]&quot;);
+$vue-&gt;data(&quot;string&quot;,&quot;&quot;);
+$vue-&gt;data(&quot;bool&quot;,true);
+$vue-&gt;method(&quot;jump(url)&quot;,&quot;js:
+  window.open(url,'_blank');
+&quot;);
+$vue-&gt;method(&quot;link(url)&quot;,&quot;js:
+  window.location.href = url;
+&quot;);
+
+</code></pre></div><p>在页面底部加入</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script type=&quot;text/javascript&quot;&gt;
+  &lt;?=$vue-&gt;run()?&gt;
+&lt;/script&gt;
+</code></pre></div><h2 id="定义data"><a href="#定义data" class="header-anchor">#</a> 定义data</h2> <div class="language- extra-class"><pre class="language-text"><code>$vue-&gt;data(&quot;object&quot;,&quot;js:{}&quot;);
+$vue-&gt;data(&quot;array&quot;,&quot;js:[]&quot;);
+$vue-&gt;data(&quot;string&quot;,&quot;&quot;);
+$vue-&gt;data(&quot;bool&quot;,true);
+</code></pre></div><h2 id="定义方法"><a href="#定义方法" class="header-anchor">#</a> 定义方法</h2> <div class="language- extra-class"><pre class="language-text"><code>$vue-&gt;method(&quot;jump(url)&quot;,&quot;js:
+  window.open(url,'_blank');
+&quot;);
+</code></pre></div><h2 id="mounted"><a href="#mounted" class="header-anchor">#</a> mounted</h2> <div class="language- extra-class"><pre class="language-text"><code>$vue-&gt;mounted('key1',&quot;js:
+     const that = this
+     window.onresize = () =&gt; {
+      return (() =&gt; {
+        that.height = that.\$refs.tableCot.offsetHeight;
+      })()
+    }
+&quot;);
+</code></pre></div><h2 id="watch"><a href="#watch" class="header-anchor">#</a> watch</h2> <div class="language- extra-class"><pre class="language-text"><code>$vue-&gt;watch(&quot;where:&quot;,&quot;js:
+    {
+      handler(newValue, oldValue) { 
+        console.log(_this.where.per_page)
+        console.log(newValue.per_page)
+        if(_this.per_page != newValue.per_page){ 
+            ajax('/plugins/table/api/admin/per_page.php',{
+              key:'&quot;.$per_page_key.&quot;',
+              val: newValue.per_page
+            },function(res){}); 
+            _this.per_page = newValue.per_page; 
+        } 
+      },
+      deep: true
+    }
+&quot;);
+</code></pre></div><h2 id="分页、添加、编辑"><a href="#分页、添加、编辑" class="header-anchor">#</a> 分页、添加、编辑</h2> <div class="language- extra-class"><pre class="language-text"><code>
+$vue = new Vue;
+$vue-&gt;opt = [
+  'is_editor' =&gt; true,
+  'is_page'  =&gt; true,
+  'is_reset' =&gt; true,
+  'is_add'   =&gt; true,
+  'is_edit'  =&gt; true,
+  'is_tree'  =&gt; true,
+];
+$editor_body = $vue-&gt;editor('body'); 
+misc(&quot;wangEditor,sortable&quot;);
+</code></pre></div><p>一个表单可以同时支持多个富文本编辑器</p> <div class="language- extra-class"><pre class="language-text"><code>$editor_title = $vue-&gt;editor('title'); 
+$editor_body = $vue-&gt;editor('body'); 
+</code></pre></div><p>在表单中输出</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;el-form-item label=&quot;内容&quot; class=&quot;mt10&quot;&gt;
+    &lt;?php echo $editor_body;?&gt;
+&lt;/el-form-item&gt;
+</code></pre></div><h2 id="自定义add-editor操作js"><a href="#自定义add-editor操作js" class="header-anchor">#</a> 自定义add editor操作JS</h2> <div class="language- extra-class"><pre class="language-text"><code>$vue-&gt;add_method = [
+        &quot;show()&quot; =&gt; &quot;js:{
+             this.is_show = true;
+             this.form = {
+              is_spec:'-1'
+             };
+             this.load_common();
+             &quot;.$vue-&gt;loadEditorAdd().&quot;
+        }&quot;
+];
+$vue-&gt;edit_method = [
+&quot;update(row)&quot; =&gt; &quot;js:{ 
+  this.activeName = 'a';
+    this.is_show = true;
+    let id = row.id;
+    ajax('/plugins/product/api/admin/product_show.php',{id:id},function(res){
+      _this.form = res.data;  
+      if(_this.form.tag &amp;&amp; _this.form.tag.length &gt; 0){
+        _this.tag = _this.tags = _this.form.tag;  
+      }else{
+        _this.tag = _this.tags = ['']; 
+      }
+      _this.main_spec = row.main_spec_name;
+      if(_this.form.spec &amp;&amp; _this.form.spec.length &gt; 0){
+        _this.spec = _this.form.spec;
+      }
+    });
+    &quot;.$vue-&gt;loadEditorUpdate().&quot;
+    
+}&quot;
+];
+</code></pre></div><h2 id="dialog"><a href="#dialog" class="header-anchor">#</a> dialog</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;el-dialog @opened=&quot;weditor()&quot; :title=&quot;row.id?'编辑商品':'添加商品'&quot; 
+    :visible.sync=&quot;is_show&quot;  
+    @closed=&quot;closed()&quot; 
+    :close-on-click-modal=&quot;false&quot; 
+    :show-close=&quot;true&quot; 
+    :close-on-press-escape=&quot;false&quot; 
+    width=&quot;1000px&quot; top=&quot;20px&quot;
+  &gt;
+</code></pre></div><p>输出js</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script&gt; 
+  var E = window.wangEditor; 
+  var editor;
+  Vue.component('vuedraggable', window.vuedraggable);
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt; 
+  &lt;?= $js ?&gt;
+&lt;/script&gt;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/database.html" class="prev">
+        数据库
+      </a></span> <span class="next"><a href="/guide/validate.html">
+        数据验证
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2c43ba1f.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/18.bc175b9f.js" defer></script>
+  </body>
+</html>

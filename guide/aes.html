@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>加密解密 | thefunpower开发包</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.73d0500b.css" as="style"><link rel="preload" href="/assets/js/app.2c43ba1f.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/12.c1fb7680.js" as="script"><link rel="prefetch" href="/assets/js/10.9f361f6a.js"><link rel="prefetch" href="/assets/js/11.fefc3b14.js"><link rel="prefetch" href="/assets/js/13.91fa5cd3.js"><link rel="prefetch" href="/assets/js/14.61993363.js"><link rel="prefetch" href="/assets/js/15.3b1194d9.js"><link rel="prefetch" href="/assets/js/16.fb54048b.js"><link rel="prefetch" href="/assets/js/17.d6a8fc89.js"><link rel="prefetch" href="/assets/js/18.bc175b9f.js"><link rel="prefetch" href="/assets/js/19.38f82786.js"><link rel="prefetch" href="/assets/js/3.3d676ef7.js"><link rel="prefetch" href="/assets/js/4.832274fd.js"><link rel="prefetch" href="/assets/js/5.e457cf98.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.159f2f50.js"><link rel="prefetch" href="/assets/js/8.2099743c.js"><link rel="prefetch" href="/assets/js/9.6a63ad8e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.73d0500b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">thefunpower开发包</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发手册</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">入门</a></li><li><a href="/guide/database.html" class="sidebar-link">数据库</a></li><li><a href="/guide/vue.html" class="sidebar-link">Vue类</a></li><li><a href="/guide/validate.html" class="sidebar-link">数据验证</a></li><li><a href="/guide/aes.html" aria-current="page" class="active sidebar-link">加密解密</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/aes.html#配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header"><a href="/guide/aes.html#加密" class="sidebar-link">加密</a></li><li class="sidebar-sub-header"><a href="/guide/aes.html#解密" class="sidebar-link">解密</a></li><li class="sidebar-sub-header"><a href="/guide/aes.html#生成签名链接" class="sidebar-link">生成签名链接</a></li></ul></li><li><a href="/guide/cmd.html" class="sidebar-link">命令行</a></li><li><a href="/guide/sortable.html" class="sidebar-link">sortable</a></li><li><a href="/guide/composer.html" class="sidebar-link">composer</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="加密解密"><a href="#加密解密" class="header-anchor">#</a> 加密解密</h1> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <p><code>config.ini.php</code></p> <div class="language- extra-class"><pre class="language-text"><code>$config['aes_key'] = md5('');
+$config['aes_iv'] = md5(''); 
+</code></pre></div><h2 id="加密"><a href="#加密" class="header-anchor">#</a> 加密</h2> <div class="language- extra-class"><pre class="language-text"><code>$sign = urlencode(aes_encode(json_encode([ 
+   //一些数据                                        
+  'time' =&gt; time()
+]), $ak, $sk));
+</code></pre></div><h2 id="解密"><a href="#解密" class="header-anchor">#</a> 解密</h2> <div class="language- extra-class"><pre class="language-text"><code>$arr = json_decode(aes_decode($sign,$ak,$sk),true);
+//10秒内有效
+if($arr &amp;&amp; $arr['time'] &gt; time()-10){
+  	    
+} 
+</code></pre></div><h2 id="生成签名链接"><a href="#生成签名链接" class="header-anchor">#</a> 生成签名链接</h2> <div class="language- extra-class"><pre class="language-text"><code>create_sample_sign_url($arr = [])  
+~~
+
+验证签名链接是否可用,60秒内
+</code></pre></div><p>verify_sample_sign_url($exp_time = 60);</p> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/validate.html" class="prev">
+        数据验证
+      </a></span> <span class="next"><a href="/guide/cmd.html">
+        命令行
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2c43ba1f.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/12.c1fb7680.js" defer></script>
+  </body>
+</html>

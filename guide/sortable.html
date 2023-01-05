@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sortable | thefunpower开发包</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.73d0500b.css" as="style"><link rel="preload" href="/assets/js/app.2c43ba1f.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/16.fb54048b.js" as="script"><link rel="prefetch" href="/assets/js/10.9f361f6a.js"><link rel="prefetch" href="/assets/js/11.fefc3b14.js"><link rel="prefetch" href="/assets/js/12.c1fb7680.js"><link rel="prefetch" href="/assets/js/13.91fa5cd3.js"><link rel="prefetch" href="/assets/js/14.61993363.js"><link rel="prefetch" href="/assets/js/15.3b1194d9.js"><link rel="prefetch" href="/assets/js/17.d6a8fc89.js"><link rel="prefetch" href="/assets/js/18.bc175b9f.js"><link rel="prefetch" href="/assets/js/19.38f82786.js"><link rel="prefetch" href="/assets/js/3.3d676ef7.js"><link rel="prefetch" href="/assets/js/4.832274fd.js"><link rel="prefetch" href="/assets/js/5.e457cf98.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.159f2f50.js"><link rel="prefetch" href="/assets/js/8.2099743c.js"><link rel="prefetch" href="/assets/js/9.6a63ad8e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.73d0500b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">thefunpower开发包</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发手册</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">入门</a></li><li><a href="/guide/database.html" class="sidebar-link">数据库</a></li><li><a href="/guide/vue.html" class="sidebar-link">Vue类</a></li><li><a href="/guide/validate.html" class="sidebar-link">数据验证</a></li><li><a href="/guide/aes.html" class="sidebar-link">加密解密</a></li><li><a href="/guide/cmd.html" class="sidebar-link">命令行</a></li><li><a href="/guide/sortable.html" aria-current="page" class="active sidebar-link">sortable</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/sortable.html#加载js" class="sidebar-link">加载js</a></li><li class="sidebar-sub-header"><a href="/guide/sortable.html#图片拖拽" class="sidebar-link">图片拖拽</a></li><li class="sidebar-sub-header"><a href="/guide/sortable.html#表格排序" class="sidebar-link">表格排序</a></li></ul></li><li><a href="/guide/composer.html" class="sidebar-link">composer</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="sortable"><a href="#sortable" class="header-anchor">#</a> sortable</h1> <h2 id="加载js"><a href="#加载js" class="header-anchor">#</a> 加载js</h2> <div class="language- extra-class"><pre class="language-text"><code>misc(&quot;sortable&quot;);
+</code></pre></div><h2 id="图片拖拽"><a href="#图片拖拽" class="header-anchor">#</a> 图片拖拽</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;draggable style=&quot;display: flex;&quot; v-model=&quot;form.imgs&quot;   @start=&quot;drag=true&quot; @end=&quot;drag=false&quot;&gt; 
+  &lt;div style=&quot;margin-right:5px;position: relative;&quot; v-for=&quot;(v,k) in form.imgs&quot;&gt;
+    &lt;img :src=&quot;v&quot; style=&quot;width:90px;height: 90px;&quot;&gt;
+    &lt;span @click=&quot;remove_img(k)&quot; style=&quot;position:absolute;right: 3px;top: -11px;color: #eee;&quot; class=&quot;hand&quot;&gt;X&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/draggable&gt;
+</code></pre></div><p>这样就会出现上传组件，上传多个图片后可以拖拽图片排序，无需额外代码.</p> <h2 id="表格排序"><a href="#表格排序" class="header-anchor">#</a> 表格排序</h2> <div class="language- extra-class"><pre class="language-text"><code>misc('sortable'); 
+$vue-&gt;sort(&quot;.sortable1 tbody&quot;,&quot;_this.form.xcx_banner&quot;);
+</code></pre></div><p>table</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;table style=&quot;width:100%;&quot; class=&quot;sortable1 pure-table pure-table-bordered&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;图片 &lt;span @click=&quot;add_banner&quot; class=&quot;hand link&quot;&gt;添加&lt;/span&gt;&lt;/th&gt;
+        &lt;th &gt;地址&lt;/th&gt; 
+        &lt;th &gt;状态&lt;/th&gt; 
+        &lt;th style=&quot;width:50px;&quot;&gt;操作&lt;/th&gt; 
+      &lt;/tr&gt;
+    &lt;/thead&gt; 
+    &lt;tbody&gt;
+    
+        &lt;tr  v-for=&quot;(v,index) in banner&quot; :key=&quot;index&quot;&gt;
+          &lt;td  class=&quot;move&quot; &gt; 
+            &lt;div class=&quot;flex&quot;&gt;
+              &lt;div&gt;
+                &lt;el-image v-if=&quot;banner[index].img_url&quot;
+              style=&quot;width: 100px; height: 100px&quot;
+              :src=&quot;banner[index].img_url&quot;
+              fit=&quot;contain&quot;&gt;&lt;/el-image&gt;
+              &lt;/div&gt;
+              &lt;div style=&quot;width: 100%;&quot;&gt;
+                &lt;el-upload  
+                      :action=&quot;'/api/admin/upload.php?index='+index+'&amp;new_upload_url=data/uploads'&quot;
+                      :on-success=&quot;success_banner&quot; 
+                      accept=&quot;&lt;?= lib\Mime::get('jpg,png,gif,webp')?&gt;&quot;  
+                      &gt;
+                      &lt;span class=&quot;link hand&quot;&gt;点击上传&lt;/span&gt; 
+                &lt;/el-upload&gt;
+
+                &lt;el-input  v-model=&quot;banner[index].img_url&quot;&gt;&lt;/el-input&gt; 
+              &lt;/div&gt;
+            &lt;/div&gt;  
+          &lt;/td&gt;
+          &lt;td class=&quot;move&quot; &gt;&lt;el-input v-model=&quot;banner[index].http_url&quot;&gt;&lt;/el-input&gt;&lt;/td&gt; 
+          &lt;td class=&quot;move&quot; &gt;
+            &lt;el-switch
+            v-model=&quot;banner[index].status&quot;
+            active-value=&quot;1&quot;
+            inactive-value=&quot;-1&quot;
+            active-color=&quot;#13ce66&quot;
+            inactive-color=&quot;#ff4949&quot;&gt;
+          &lt;/el-switch&gt;
+         &lt;/td&gt; 	
+         &lt;td class=&quot;move&quot; &gt;
+          &lt;span @click=&quot;del_banner(index)&quot; class=&quot;hand link&quot;&gt;删除&lt;/span&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt; 
+  &lt;/tbody&gt;
+  &lt;/table&gt; 
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/cmd.html" class="prev">
+        命令行
+      </a></span> <span class="next"><a href="/guide/composer.html">
+        composer
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2c43ba1f.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/16.fb54048b.js" defer></script>
+  </body>
+</html>

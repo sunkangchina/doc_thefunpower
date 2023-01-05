@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>入门 | thefunpower开发包</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.73d0500b.css" as="style"><link rel="preload" href="/assets/js/app.2c43ba1f.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/11.fefc3b14.js" as="script"><link rel="prefetch" href="/assets/js/10.9f361f6a.js"><link rel="prefetch" href="/assets/js/12.c1fb7680.js"><link rel="prefetch" href="/assets/js/13.91fa5cd3.js"><link rel="prefetch" href="/assets/js/14.61993363.js"><link rel="prefetch" href="/assets/js/15.3b1194d9.js"><link rel="prefetch" href="/assets/js/16.fb54048b.js"><link rel="prefetch" href="/assets/js/17.d6a8fc89.js"><link rel="prefetch" href="/assets/js/18.bc175b9f.js"><link rel="prefetch" href="/assets/js/19.38f82786.js"><link rel="prefetch" href="/assets/js/3.3d676ef7.js"><link rel="prefetch" href="/assets/js/4.832274fd.js"><link rel="prefetch" href="/assets/js/5.e457cf98.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.159f2f50.js"><link rel="prefetch" href="/assets/js/8.2099743c.js"><link rel="prefetch" href="/assets/js/9.6a63ad8e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.73d0500b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">thefunpower开发包</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  手册
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  手册
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发手册</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="active sidebar-link">入门</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/guide/#基他配置" class="sidebar-link">基他配置</a></li><li class="sidebar-sub-header"><a href="/guide/#上传文件限制" class="sidebar-link">上传文件限制</a></li><li class="sidebar-sub-header"><a href="/guide/#max-input-vars" class="sidebar-link">maxinputvars</a></li><li class="sidebar-sub-header"><a href="/guide/#限制uploads访问" class="sidebar-link">限制uploads访问</a></li><li class="sidebar-sub-header"><a href="/guide/#git自动同步代码" class="sidebar-link">GIT自动同步代码</a></li></ul></li><li><a href="/guide/database.html" class="sidebar-link">数据库</a></li><li><a href="/guide/vue.html" class="sidebar-link">Vue类</a></li><li><a href="/guide/validate.html" class="sidebar-link">数据验证</a></li><li><a href="/guide/aes.html" class="sidebar-link">加密解密</a></li><li><a href="/guide/cmd.html" class="sidebar-link">命令行</a></li><li><a href="/guide/sortable.html" class="sidebar-link">sortable</a></li><li><a href="/guide/composer.html" class="sidebar-link">composer</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="入门"><a href="#入门" class="header-anchor">#</a> 入门</h1> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <p>环境依赖</p> <p>● PHP 8.1
+● MySQL 5.7
+● Ngnix
+● Redis</p> <p>执行</p> <div class="language- extra-class"><pre class="language-text"><code>composer install
+yarn
+vim config.ini.php #内容不用写为空就可以
+chmod -R 777 config.ini.php
+</code></pre></div><p>修改目录权限</p> <div class="language- extra-class"><pre class="language-text"><code>mkdir uploads
+mkdir data/uploads
+mkdir data/log
+mkdir data/cache
+chmod -R 777 data
+chmod -R 777 cache
+chmod -R 777 uploads
+</code></pre></div><p>Ngnix重写</p> <div class="language- extra-class"><pre class="language-text"><code>location ~.*\.(sql|pem) {
+  deny all;
+}  
+location / {
+    if (!-e $request_filename){
+        rewrite ^(.*)$ /index.php last;
+    }  
+}
+</code></pre></div><h2 id="基他配置"><a href="#基他配置" class="header-anchor">#</a> 基他配置</h2> <p>跨域，如出现跨域问题可在ngnix中配置，一般不需要配置。</p> <div class="language- extra-class"><pre class="language-text"><code>add_header Access-Control-Allow-Origin *;
+add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS';
+add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
+</code></pre></div><h2 id="上传文件限制"><a href="#上传文件限制" class="header-anchor">#</a> 上传文件限制</h2> <p>请根据实际情况确认修改具体参数
+在Ngnix中的http{}中加</p> <div class="language- extra-class"><pre class="language-text"><code>client_max_body_size 1000m
+</code></pre></div><p>php.ini中修改</p> <div class="language- extra-class"><pre class="language-text"><code>post_max_size = 1000M
+upload_max_filesize = 1000M
+max_file_uploads = 500
+</code></pre></div><h2 id="max-input-vars"><a href="#max-input-vars" class="header-anchor">#</a> max_input_vars</h2> <div class="language- extra-class"><pre class="language-text"><code>max_input_vars = 6000
+</code></pre></div><h2 id="限制uploads访问"><a href="#限制uploads访问" class="header-anchor">#</a> 限制uploads访问</h2> <p>请根据需要media.php修改相应代码</p> <div class="language- extra-class"><pre class="language-text"><code>location ^~ /uploads {
+    internal; 
+} 
+location ~* \.(png|jpg|jpeg|gif|pdf|mp4|docx|doc|xls|xlsx|webp|webm)$ { 
+    if (!-f $request_filename) {
+        rewrite ^/.*$ /media.php;
+    } 
+    if ( -f $request_filename ) {
+        expires 1d;
+    }
+}
+</code></pre></div><h2 id="git自动同步代码"><a href="#git自动同步代码" class="header-anchor">#</a> GIT自动同步代码</h2> <div class="language- extra-class"><pre class="language-text"><code>查看密钥 
+</code></pre></div><p>cat ~/.ssh/id_rsa.pub</p> <div class="language- extra-class"><pre class="language-text"><code>生成秘钥
+</code></pre></div><p>ssh-keygen -t rsa -C &quot;邮件地址&quot;</p> <div class="language- extra-class"><pre class="language-text"><code>
+本地开发ca证书
+</code></pre></div><p>wget http://curl.haxx.se/ca/cacert.pem
+mkdir -p /usr/local/openssl/ssl/certs/
+mv cacert.pem /usr/local/openssl/ssl/certs/cacert.pem</p> <div class="language- extra-class"><pre class="language-text"><code>修改php.ini
+</code></pre></div><p>openssl.cafile=/usr/local/openssl/ssl/certs/cacert.pem</p> <div class="language- extra-class"><pre class="language-text"><code>
+## 核心包
+thefunpower开发包是一套简洁的PHP底层代码。
+</code></pre></div><p>composer require thefunpower/core     #核心包</p> <div class="language- extra-class"><pre class="language-text"><code></code></pre></div><p>composer require thefunpower/db_medoo #数据库</p> <div class="language- extra-class"><pre class="language-text"><code></code></pre></div><p>composer require thefunpower/auth     #权限</p> <div class="language- extra-class"><pre class="language-text"><code>
+
+
+## 依赖包
+Database https://medoo.in/api/select 
+路由 https://github.com/bramus/router
+CURL guzzlephp7 https://docs.guzzlephp.org/en/stable/
+csv https://csv.thephpleague.com/
+qr https://github.com/endroid/qr-code
+微信接口 https://easywechat.com/6.x/ 
+http curl https://github.com/guzzle/guzzle/
+layui http://www.uimaker.com/layui/doc/modules/layer.html </code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/guide/database.html">
+        数据库
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2c43ba1f.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/11.fefc3b14.js" defer></script>
+  </body>
+</html>
