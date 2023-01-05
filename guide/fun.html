@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>函数 | thefunpower开发包</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.73d0500b.css" as="style"><link rel="preload" href="/assets/js/app.88417eb1.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/16.a6e8ad33.js" as="script"><link rel="prefetch" href="/assets/js/10.9f361f6a.js"><link rel="prefetch" href="/assets/js/11.fefc3b14.js"><link rel="prefetch" href="/assets/js/12.c1fb7680.js"><link rel="prefetch" href="/assets/js/13.91fa5cd3.js"><link rel="prefetch" href="/assets/js/14.e633743f.js"><link rel="prefetch" href="/assets/js/15.6351a19f.js"><link rel="prefetch" href="/assets/js/17.b15d9dfa.js"><link rel="prefetch" href="/assets/js/18.5a1159ca.js"><link rel="prefetch" href="/assets/js/19.07490f6d.js"><link rel="prefetch" href="/assets/js/20.6cf9011a.js"><link rel="prefetch" href="/assets/js/21.c39bbb64.js"><link rel="prefetch" href="/assets/js/3.869cf45f.js"><link rel="prefetch" href="/assets/js/4.832274fd.js"><link rel="prefetch" href="/assets/js/5.e457cf98.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.159f2f50.js"><link rel="prefetch" href="/assets/js/8.827714f8.js"><link rel="prefetch" href="/assets/js/9.6a63ad8e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.73d0500b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">thefunpower开发包</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发手册</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">入门</a></li><li><a href="/guide/fun.html" aria-current="page" class="active sidebar-link">函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/fun.html#数组或字符输出" class="sidebar-link">数组或字符输出</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#添加动作" class="sidebar-link">添加动作</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#执行动作" class="sidebar-link">执行动作</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#自动加载主题" class="sidebar-link">自动加载主题</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#跳转" class="sidebar-link">跳转</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#cdn地址" class="sidebar-link">CDN地址</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#输出json" class="sidebar-link">输出json</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#当前域名" class="sidebar-link">当前域名</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#判断是命令行下" class="sidebar-link">判断是命令行下</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#是否是post请求" class="sidebar-link">是否是POST请求</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#是否是json格式" class="sidebar-link">是否是json格式</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#加载css" class="sidebar-link">加载css</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#加载-js文件" class="sidebar-link">加载 JS文件</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#数组转对象" class="sidebar-link">数组转对象</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#对象转数组" class="sidebar-link">对象转数组</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#取目录名" class="sidebar-link">取目录名</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#取后缀" class="sidebar-link">取后缀</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#取文件名" class="sidebar-link">取文件名</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#创建目录" class="sidebar-link">创建目录</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#是否是本地环境" class="sidebar-link">是否是本地环境</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#取ip" class="sidebar-link">取IP</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#当前时间datetime" class="sidebar-link">当前时间datetime</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#计算两点地理坐标之间的距离" class="sidebar-link">计算两点地理坐标之间的距离</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#判断是否是ssl" class="sidebar-link">判断是否是ssl</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#设置、获取cookie" class="sidebar-link">设置、获取cookie</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#删除cookie" class="sidebar-link">删除cookie</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#时间区间" class="sidebar-link">时间区间</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#路径列表-支持文件夹下的子所有文件夹" class="sidebar-link">路径列表，支持文件夹下的子所有文件夹</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#显示2位小数" class="sidebar-link">显示2位小数</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#返回错误信息-json格式" class="sidebar-link">返回错误信息，JSON格式</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#返回成功信息-json格式" class="sidebar-link">返回成功信息，JSON格式</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#yaml转数组-数组转yaml格式" class="sidebar-link">yaml转数组，数组转yaml格式</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#加载theme下文件" class="sidebar-link">加载theme下文件</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#前台当前主题" class="sidebar-link">前台当前主题</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#前台主题url" class="sidebar-link">前台主题url</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#设置前台主题" class="sidebar-link">设置前台主题</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#设置后台主题" class="sidebar-link">设置后台主题</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#后台主题url" class="sidebar-link">后台主题url</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#设置配置" class="sidebar-link">设置配置</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#获取配置" class="sidebar-link">获取配置</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#elementui-table序号" class="sidebar-link">elementui table序号</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#每页显示多少条记录" class="sidebar-link">每页显示多少条记录</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#显示下拉选择分页每页显示多少条" class="sidebar-link">显示下拉选择分页每页显示多少条</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#aes加密" class="sidebar-link">AES加密</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#aes解密" class="sidebar-link">AES解密</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#翻译" class="sidebar-link">翻译</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#搜索替换-n-空格" class="sidebar-link">搜索替换\n , ，空格</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#返回两个时间点间的日期数组" class="sidebar-link">返回两个时间点间的日期数组</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#当前时间是周几" class="sidebar-link">当前时间是周几</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#多少时间之前" class="sidebar-link">多少时间之前</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#请求是否是ajax" class="sidebar-link">请求是否是AJAX</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#防止重复执行" class="sidebar-link">防止重复执行</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#包含文件" class="sidebar-link">包含文件</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#生成表单token-防止重复提交" class="sidebar-link">生成表单TOKEN，防止重复提交</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#检测表单token" class="sidebar-link">检测表单TOKEN</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#检测reffer是否正常-如异常返回json" class="sidebar-link">检测reffer是否正常，如异常返回JSON</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#检测reffer" class="sidebar-link">检测reffer</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#取reffer" class="sidebar-link">取reffer</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#取主域名-如-admin-baidu-com返回baidu-com" class="sidebar-link">取主域名，如 admin.baidu.com返回baidu.com</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#取子域名-如admin-baidu-com返回admin" class="sidebar-link">取子域名，如admin.baidu.com返回admin</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#admin-header" class="sidebar-link">admin header</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#admin-footer" class="sidebar-link">admin footer</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#格式化金额" class="sidebar-link">格式化金额</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#生成签名" class="sidebar-link">生成签名</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#设置当前语言" class="sidebar-link">设置当前语言</a></li><li class="sidebar-sub-header"><a href="/guide/fun.html#生成url包含host" class="sidebar-link">生成URL包含host</a></li></ul></li><li><a href="/guide/database.html" class="sidebar-link">数据库</a></li><li><a href="/guide/vue.html" class="sidebar-link">Vue类</a></li><li><a href="/guide/validate.html" class="sidebar-link">数据验证</a></li><li><a href="/guide/aes.html" class="sidebar-link">加密解密</a></li><li><a href="/guide/plugin_upgrade.html" class="sidebar-link">插件</a></li><li><a href="/guide/cmd.html" class="sidebar-link">命令行</a></li><li><a href="/guide/sortable.html" class="sidebar-link">sortable</a></li><li><a href="/guide/composer.html" class="sidebar-link">composer</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="函数"><a href="#函数" class="header-anchor">#</a> 函数</h1> <h2 id="数组或字符输出"><a href="#数组或字符输出" class="header-anchor">#</a> 数组或字符输出</h2> <div class="language- extra-class"><pre class="language-text"><code>pr($str);
+</code></pre></div><h2 id="添加动作"><a href="#添加动作" class="header-anchor">#</a> 添加动作</h2> <div class="language- extra-class"><pre class="language-text"><code>add_action($name, $call,$level = 20)
+</code></pre></div><h2 id="执行动作"><a href="#执行动作" class="header-anchor">#</a> 执行动作</h2> <div class="language- extra-class"><pre class="language-text"><code>do_action($name, &amp;$par = null);
+</code></pre></div><h2 id="自动加载主题"><a href="#自动加载主题" class="header-anchor">#</a> 自动加载主题</h2> <div class="language- extra-class"><pre class="language-text"><code>autoload_theme($name = &quot;front&quot;)
+</code></pre></div><h2 id="跳转"><a href="#跳转" class="header-anchor">#</a> 跳转</h2> <div class="language- extra-class"><pre class="language-text"><code>jump($url)
+</code></pre></div><h2 id="cdn地址"><a href="#cdn地址" class="header-anchor">#</a> CDN地址</h2> <div class="language- extra-class"><pre class="language-text"><code>static_url()
+</code></pre></div><p>需要配置</p> <div class="language- extra-class"><pre class="language-text"><code>$config['cdn_url'] = [
+	'',
+];
+</code></pre></div><p>如果没有配置将返回本地host地址</p> <h2 id="输出json"><a href="#输出json" class="header-anchor">#</a> 输出json</h2> <div class="language- extra-class"><pre class="language-text"><code>json($data)
+</code></pre></div><p>JSON输出前</p> <div class="language- extra-class"><pre class="language-text"><code>do_action('end.data', $data);
+</code></pre></div><p>JSON输出后或页面渲染后</p> <div class="language- extra-class"><pre class="language-text"><code>do_action(&quot;end&quot;);
+</code></pre></div><h2 id="当前域名"><a href="#当前域名" class="header-anchor">#</a> 当前域名</h2> <div class="language- extra-class"><pre class="language-text"><code>host()
+</code></pre></div><h2 id="判断是命令行下"><a href="#判断是命令行下" class="header-anchor">#</a> 判断是命令行下</h2> <div class="language- extra-class"><pre class="language-text"><code>is_cli()
+</code></pre></div><h2 id="是否是post请求"><a href="#是否是post请求" class="header-anchor">#</a> 是否是POST请求</h2> <div class="language- extra-class"><pre class="language-text"><code>is_post()
+</code></pre></div><h2 id="是否是json格式"><a href="#是否是json格式" class="header-anchor">#</a> 是否是json格式</h2> <div class="language- extra-class"><pre class="language-text"><code>is_json($data)
+</code></pre></div><h2 id="加载css"><a href="#加载css" class="header-anchor">#</a> 加载css</h2> <div class="language- extra-class"><pre class="language-text"><code>css($file, $is_output = true)
+</code></pre></div><h2 id="加载-js文件"><a href="#加载-js文件" class="header-anchor">#</a> 加载 JS文件</h2> <div class="language- extra-class"><pre class="language-text"><code>js($file, $is_output = true)
+</code></pre></div><h2 id="数组转对象"><a href="#数组转对象" class="header-anchor">#</a> 数组转对象</h2> <div class="language- extra-class"><pre class="language-text"><code>array_to_object($arr)
+</code></pre></div><h2 id="对象转数组"><a href="#对象转数组" class="header-anchor">#</a> 对象转数组</h2> <div class="language- extra-class"><pre class="language-text"><code>object_to_array($obj)
+</code></pre></div><h2 id="取目录名"><a href="#取目录名" class="header-anchor">#</a> 取目录名</h2> <div class="language- extra-class"><pre class="language-text"><code>get_dir($name)
+</code></pre></div><h2 id="取后缀"><a href="#取后缀" class="header-anchor">#</a> 取后缀</h2> <div class="language- extra-class"><pre class="language-text"><code>get_ext($name)
+</code></pre></div><p>返回全小写且不包含.</p> <h2 id="取文件名"><a href="#取文件名" class="header-anchor">#</a> 取文件名</h2> <div class="language- extra-class"><pre class="language-text"><code>get_name($name)
+</code></pre></div><h2 id="创建目录"><a href="#创建目录" class="header-anchor">#</a> 创建目录</h2> <div class="language- extra-class"><pre class="language-text"><code>create_dir_if_not_exists($arr = [])
+</code></pre></div><p>支持数组或字符串，传入完整的本地路径</p> <h2 id="是否是本地环境"><a href="#是否是本地环境" class="header-anchor">#</a> 是否是本地环境</h2> <div class="language- extra-class"><pre class="language-text"><code>is_local()
+</code></pre></div><h2 id="取ip"><a href="#取ip" class="header-anchor">#</a> 取IP</h2> <div class="language- extra-class"><pre class="language-text"><code>get_ip()
+</code></pre></div><h2 id="当前时间datetime"><a href="#当前时间datetime" class="header-anchor">#</a> 当前时间datetime</h2> <div class="language- extra-class"><pre class="language-text"><code>now()
+</code></pre></div><h2 id="计算两点地理坐标之间的距离"><a href="#计算两点地理坐标之间的距离" class="header-anchor">#</a> 计算两点地理坐标之间的距离</h2> <div class="language- extra-class"><pre class="language-text"><code>get_distance($longitude1, $latitude1, $longitude2, $latitude2, $unit = 2, $decimal = 2)
+</code></pre></div><p><code>$unit</code> 单位 1:米 2:公里</p> <p><code>$decimal</code>	精度 保留小数位数</p> <h2 id="判断是否是ssl"><a href="#判断是否是ssl" class="header-anchor">#</a> 判断是否是ssl</h2> <div class="language- extra-class"><pre class="language-text"><code>is_ssl()
+</code></pre></div><h2 id="设置、获取cookie"><a href="#设置、获取cookie" class="header-anchor">#</a> 设置、获取cookie</h2> <div class="language- extra-class"><pre class="language-text"><code>cookie($name, $value = NULL, $expire = 0)
+</code></pre></div><p>例：</p> <div class="language- extra-class"><pre class="language-text"><code>//设置三年cookie
+cookie('id',1,time()+86400*365*3);
+//获取cookie
+cookie('id')
+</code></pre></div><h2 id="删除cookie"><a href="#删除cookie" class="header-anchor">#</a> 删除cookie</h2> <div class="language- extra-class"><pre class="language-text"><code>remove_cookie($name)
+</code></pre></div><h2 id="时间区间"><a href="#时间区间" class="header-anchor">#</a> 时间区间</h2> <p>一般用不到</p> <div class="language- extra-class"><pre class="language-text"><code>date_limit()
+</code></pre></div><p>返回</p> <div class="language- extra-class"><pre class="language-text"><code> min=&quot;1900-01-01&quot; max=&quot;'.$max.'-12-31&quot;
+</code></pre></div><h2 id="路径列表-支持文件夹下的子所有文件夹"><a href="#路径列表-支持文件夹下的子所有文件夹" class="header-anchor">#</a> 路径列表，支持文件夹下的子所有文件夹</h2> <div class="language- extra-class"><pre class="language-text"><code>get_deep_dir($path)
+</code></pre></div><h2 id="显示2位小数"><a href="#显示2位小数" class="header-anchor">#</a> 显示2位小数</h2> <div class="language- extra-class"><pre class="language-text"><code>price_format($yuan,$dot = 2)
+</code></pre></div><h2 id="返回错误信息-json格式"><a href="#返回错误信息-json格式" class="header-anchor">#</a> 返回错误信息，JSON格式</h2> <div class="language- extra-class"><pre class="language-text"><code>json_error($arr = [])
+</code></pre></div><h2 id="返回成功信息-json格式"><a href="#返回成功信息-json格式" class="header-anchor">#</a> 返回成功信息，JSON格式</h2> <div class="language- extra-class"><pre class="language-text"><code>json_success($arr = [])
+</code></pre></div><h2 id="yaml转数组-数组转yaml格式"><a href="#yaml转数组-数组转yaml格式" class="header-anchor">#</a> yaml转数组，数组转yaml格式</h2> <div class="language- extra-class"><pre class="language-text"><code>yaml($str)
+</code></pre></div><h2 id="加载theme下文件"><a href="#加载theme下文件" class="header-anchor">#</a> 加载theme下文件</h2> <div class="language- extra-class"><pre class="language-text"><code>view($name, $params = [])
+</code></pre></div><h2 id="前台当前主题"><a href="#前台当前主题" class="header-anchor">#</a> 前台当前主题</h2> <div class="language- extra-class"><pre class="language-text"><code>get_theme()
+</code></pre></div><h2 id="前台主题url"><a href="#前台主题url" class="header-anchor">#</a> 前台主题url</h2> <div class="language- extra-class"><pre class="language-text"><code>theme_url()
+</code></pre></div><h2 id="设置前台主题"><a href="#设置前台主题" class="header-anchor">#</a> 设置前台主题</h2> <div class="language- extra-class"><pre class="language-text"><code>set_theme($name)
+</code></pre></div><h2 id="设置后台主题"><a href="#设置后台主题" class="header-anchor">#</a> 设置后台主题</h2> <div class="language- extra-class"><pre class="language-text"><code>set_admin_theme($name)
+</code></pre></div><h2 id="后台主题url"><a href="#后台主题url" class="header-anchor">#</a> 后台主题url</h2> <div class="language- extra-class"><pre class="language-text"><code>admin_theme_url()
+</code></pre></div><h2 id="设置配置"><a href="#设置配置" class="header-anchor">#</a> 设置配置</h2> <div class="language- extra-class"><pre class="language-text"><code>set_config($title, $body)
+</code></pre></div><h2 id="获取配置"><a href="#获取配置" class="header-anchor">#</a> 获取配置</h2> <p>优先取数据库，未找到后取配置文件</p> <div class="language- extra-class"><pre class="language-text"><code>get_config($title)
+</code></pre></div><h2 id="elementui-table序号"><a href="#elementui-table序号" class="header-anchor">#</a> elementui table序号</h2> <p>在vue method中添加</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;?= element_index_method() ?&gt;,
+</code></pre></div><p>生成indexMethod(index)</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;el-table-column type=&quot;index&quot; label=&quot;序号&quot; :index=&quot;indexMethod&quot; width=&quot;50&quot;&gt;
+&lt;/el-table-column&gt;
+</code></pre></div><h2 id="每页显示多少条记录"><a href="#每页显示多少条记录" class="header-anchor">#</a> 每页显示多少条记录</h2> <div class="language- extra-class"><pre class="language-text"><code>page_size($name)
+</code></pre></div><h2 id="显示下拉选择分页每页显示多少条"><a href="#显示下拉选择分页每页显示多少条" class="header-anchor">#</a> 显示下拉选择分页每页显示多少条</h2> <div class="language- extra-class"><pre class="language-text"><code>page_size_array()
+</code></pre></div><h2 id="aes加密"><a href="#aes加密" class="header-anchor">#</a> AES加密</h2> <div class="language- extra-class"><pre class="language-text"><code>$token = urlencode(aes_encode($d)); 
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>aes_encode($data, $key = '', $iv = '', $type = 'AES-128-CBC', $options = '')
+</code></pre></div><p><code>$data</code>如果是数组需<code>json_encode</code></p> <p>配置config.ini.php</p> <div class="language- extra-class"><pre class="language-text"><code>$config['aes_key'] = &quot;&quot;;
+$config['aes_iv']  = &quot;&quot;;
+</code></pre></div><h2 id="aes解密"><a href="#aes解密" class="header-anchor">#</a> AES解密</h2> <div class="language- extra-class"><pre class="language-text"><code>$token = $_GET['token']; 
+$token = aes_decode($token);
+pr($token);
+</code></pre></div><h2 id="翻译"><a href="#翻译" class="header-anchor">#</a> 翻译</h2> <div class="language- extra-class"><pre class="language-text"><code>lang($name, $val = [], $pre = 'app')
+</code></pre></div><p>配置<code>lang/app.php</code></p> <div class="language- extra-class"><pre class="language-text"><code>return [
+    'welcome' =&gt; '你好{name}', 
+]; 
+</code></pre></div><p>调用</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;?= lang('welcome',['name'=&gt;'test'])?&gt;
+</code></pre></div><h2 id="搜索替换-n-空格"><a href="#搜索替换-n-空格" class="header-anchor">#</a> 搜索替换\n , ，空格</h2> <div class="language- extra-class"><pre class="language-text"><code>string_to_array($name,$array = '')
+</code></pre></div><p>已替换</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;\n&quot;,
+&quot;，&quot;,
+&quot;、&quot;,
+&quot;|&quot;,
+&quot;,&quot;,
+chr(10),
+</code></pre></div><h2 id="返回两个时间点间的日期数组"><a href="#返回两个时间点间的日期数组" class="header-anchor">#</a> 返回两个时间点间的日期数组</h2> <div class="language- extra-class"><pre class="language-text"><code>get_dates($start, $end)
+</code></pre></div><p>时间格式 Y-m-d</p> <h2 id="当前时间是周几"><a href="#当前时间是周几" class="header-anchor">#</a> 当前时间是周几</h2> <p>时间格式 Y-m-d</p> <div class="language- extra-class"><pre class="language-text"><code>get_date_china($date)
+</code></pre></div><h2 id="多少时间之前"><a href="#多少时间之前" class="header-anchor">#</a> 多少时间之前</h2> <div class="language- extra-class"><pre class="language-text"><code>timeago($time)
+</code></pre></div><h2 id="请求是否是ajax"><a href="#请求是否是ajax" class="header-anchor">#</a> 请求是否是AJAX</h2> <div class="language- extra-class"><pre class="language-text"><code>is_ajax()
+</code></pre></div><h2 id="防止重复执行"><a href="#防止重复执行" class="header-anchor">#</a> 防止重复执行</h2> <div class="language- extra-class"><pre class="language-text"><code>cli_prevent_duplication($argv, $cmd = 'php cmd.php')
+</code></pre></div><h2 id="包含文件"><a href="#包含文件" class="header-anchor">#</a> 包含文件</h2> <div class="language- extra-class"><pre class="language-text"><code>import($file)
+</code></pre></div><h2 id="生成表单token-防止重复提交"><a href="#生成表单token-防止重复提交" class="header-anchor">#</a> 生成表单TOKEN，防止重复提交</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;input type=&quot;hidden&quot; name=&quot;form_token&quot; value=&quot;&lt;?=create_form_token()?&gt;&quot;&gt;
+</code></pre></div><h2 id="检测表单token"><a href="#检测表单token" class="header-anchor">#</a> 检测表单TOKEN</h2> <div class="language- extra-class"><pre class="language-text"><code>check_form_token(g('form_token'));
+</code></pre></div><h2 id="检测reffer是否正常-如异常返回json"><a href="#检测reffer是否正常-如异常返回json" class="header-anchor">#</a> 检测reffer是否正常，如异常返回JSON</h2> <div class="language- extra-class"><pre class="language-text"><code>check_reffer_with_json($allow_domain = [], $is_root = true)
+</code></pre></div><h2 id="检测reffer"><a href="#检测reffer" class="header-anchor">#</a> 检测reffer</h2> <p>返回true或false</p> <div class="language- extra-class"><pre class="language-text"><code>check_reffer($allow_domain = [], $is_root = true)
+</code></pre></div><h2 id="取reffer"><a href="#取reffer" class="header-anchor">#</a> 取reffer</h2> <div class="language- extra-class"><pre class="language-text"><code>get_reffer($refer = '')
+</code></pre></div><h2 id="取主域名-如-admin-baidu-com返回baidu-com"><a href="#取主域名-如-admin-baidu-com返回baidu-com" class="header-anchor">#</a> 取主域名，如 admin.baidu.com返回baidu.com</h2> <div class="language- extra-class"><pre class="language-text"><code>get_root_domain($host = '')
+</code></pre></div><h2 id="取子域名-如admin-baidu-com返回admin"><a href="#取子域名-如admin-baidu-com返回admin" class="header-anchor">#</a> 取子域名，如admin.baidu.com返回admin</h2> <div class="language- extra-class"><pre class="language-text"><code>get_sub_domain($host = '')
+</code></pre></div><h2 id="admin-header"><a href="#admin-header" class="header-anchor">#</a> admin header</h2> <div class="language- extra-class"><pre class="language-text"><code>admin_header()
+</code></pre></div><h2 id="admin-footer"><a href="#admin-footer" class="header-anchor">#</a> admin footer</h2> <div class="language- extra-class"><pre class="language-text"><code>admin_footer()
+</code></pre></div><h2 id="格式化金额"><a href="#格式化金额" class="header-anchor">#</a> 格式化金额</h2> <div class="language- extra-class"><pre class="language-text"><code>format_money($money, $len = 2, $sign = '￥')
+</code></pre></div><h2 id="生成签名"><a href="#生成签名" class="header-anchor">#</a> 生成签名</h2> <div class="language- extra-class"><pre class="language-text"><code>sign_by_secret($params,$secret='',$array_encode = false)
+</code></pre></div><h2 id="设置当前语言"><a href="#设置当前语言" class="header-anchor">#</a> 设置当前语言</h2> <div class="language- extra-class"><pre class="language-text"><code>set_lang($lang = 'zh-cn')
+</code></pre></div><h2 id="生成url包含host"><a href="#生成url包含host" class="header-anchor">#</a> 生成URL包含host</h2> <div class="language- extra-class"><pre class="language-text"><code>create_url($url)
+~~ 
+## block
+BLOCK开始
+</code></pre></div><p>block_start($name)
+block_end()</p> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><p>get_block($name)</p> <div class="language- extra-class"><pre class="language-text"><code>
+## ZIP解压
+</code></pre></div><p>zip_extract($local_file,$extract_local_dir)</p> <div class="language- extra-class"><pre class="language-text"><code>
+## 生成ZIP
+</code></pre></div><p>zip_create($local_zip_file,$files = [])</p> <div class="language- extra-class"><pre class="language-text"><code>
+## PDF
+加载pdf，自动判断是否使用了背景文字水印 
+</code></pre></div><p>pdf_auto($text = null)</p> <div class="language- extra-class"><pre class="language-text"><code>无水印
+</code></pre></div><p>pdf($font_size = 9,$default_config_option=[])</p> <div class="language- extra-class"><pre class="language-text"><code>文字水印
+</code></pre></div><p>pdf_watermark($text = null)</p> <div class="language- extra-class"><pre class="language-text"><code>
+
+https://mpdf.github.io/
+
+
+## 生成签名链接 [实验]
+</code></pre></div><p>create_sample_sign_url($arr = [])</p> <div class="language- extra-class"><pre class="language-text"><code>
+## 验证签名链接是否可用 [实验]
+`$exp_time` 秒
+</code></pre></div><p>verify_sample_sign_url($exp_time = 60)</p> <div class="language- extra-class"><pre class="language-text"><code>
+## 检查签名防止篡改 [实验]
+错误时返回 签名错误
+</code></pre></div><p>signature_checker()</p> <div class="language- extra-class"><pre class="language-text"><code>
+
+签名生成的通用步骤如下：
+第一步：将参与签名的参数按照键值(key)进行字典排序
+第二步：将排序过后的参数，进行key和value字符串拼接
+第三步：将拼接后的字符串首尾加上app_secret秘钥，合成签名字符串
+第四步：对签名字符串进行MD5加密，生成32位的字符串
+第五步：将签名生成的32位字符串转换为大写 
+
+
+##  数组转tree 
+
+array_to_tree
+
+</code></pre></div><p>array_to_tree($list, $pk = 'id', $pid = 'pid', $child = 'children', $root = 0, $my_id = '')</p> <div class="language- extra-class"><pre class="language-text"><code>
+ 输入$list 
+</code></pre></div><p>[
+{id:1,pid:0,其他字段},
+{id:2,pid:1,其他字段},
+{id:3,pid:1,其他字段},
+]</p> <div class="language- extra-class"><pre class="language-text"><code>输出 
+</code></pre></div><p>[
+[
+id:1,
+pid:0,
+其他字段,
+children:[
+{id:2,pid:1,其他字段},
+{id:3,pid:1,其他字段},
+]
+]
+]</p> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/" class="prev router-link-active">
+        入门
+      </a></span> <span class="next"><a href="/guide/database.html">
+        数据库
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.88417eb1.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/16.a6e8ad33.js" defer></script>
+  </body>
+</html>
