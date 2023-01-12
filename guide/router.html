@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>路由 | thefunpower开发包</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.73d0500b.css" as="style"><link rel="preload" href="/assets/js/app.0c99f908.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/18.99a53d40.js" as="script"><link rel="prefetch" href="/assets/js/10.9f361f6a.js"><link rel="prefetch" href="/assets/js/11.91374aa4.js"><link rel="prefetch" href="/assets/js/12.1898e729.js"><link rel="prefetch" href="/assets/js/13.91fa5cd3.js"><link rel="prefetch" href="/assets/js/14.4b667a9c.js"><link rel="prefetch" href="/assets/js/15.ff8c9d82.js"><link rel="prefetch" href="/assets/js/16.12b66549.js"><link rel="prefetch" href="/assets/js/17.09ee07af.js"><link rel="prefetch" href="/assets/js/19.08f84d9c.js"><link rel="prefetch" href="/assets/js/20.40c403e9.js"><link rel="prefetch" href="/assets/js/21.6ef7128a.js"><link rel="prefetch" href="/assets/js/22.e017481d.js"><link rel="prefetch" href="/assets/js/3.b66398e9.js"><link rel="prefetch" href="/assets/js/4.832274fd.js"><link rel="prefetch" href="/assets/js/5.e457cf98.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.159f2f50.js"><link rel="prefetch" href="/assets/js/8.7226c51f.js"><link rel="prefetch" href="/assets/js/9.6a63ad8e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.73d0500b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">thefunpower开发包</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  手册
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发手册</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">入门</a></li><li><a href="/guide/fun.html" class="sidebar-link">函数</a></li><li><a href="/guide/database.html" class="sidebar-link">数据库</a></li><li><a href="/guide/vue.html" class="sidebar-link">Vue类</a></li><li><a href="/guide/router.html" aria-current="page" class="active sidebar-link">路由</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/router.html#ngnix重写" class="sidebar-link">Ngnix重写</a></li><li class="sidebar-sub-header"><a href="/guide/router.html#请求" class="sidebar-link">请求</a></li></ul></li><li><a href="/guide/validate.html" class="sidebar-link">数据验证</a></li><li><a href="/guide/aes.html" class="sidebar-link">加密解密</a></li><li><a href="/guide/plugin_upgrade.html" class="sidebar-link">插件</a></li><li><a href="/guide/cmd.html" class="sidebar-link">命令行</a></li><li><a href="/guide/sortable.html" class="sidebar-link">sortable</a></li><li><a href="/guide/composer.html" class="sidebar-link">composer</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="路由"><a href="#路由" class="header-anchor">#</a> 路由</h1> <h2 id="ngnix重写"><a href="#ngnix重写" class="header-anchor">#</a> Ngnix重写</h2> <div class="language- extra-class"><pre class="language-text"><code>location ~.*\.(sql|pem) {
+  deny all;
+}  
+location / {
+    if (!-e $request_filename){
+        rewrite ^(.*)$ /index.php last;
+    }  
+}
+</code></pre></div><h2 id="请求"><a href="#请求" class="header-anchor">#</a> 请求</h2> <p><code>boot/router.php</code></p> <h3 id="get-post-put-delete-options"><a href="#get-post-put-delete-options" class="header-anchor">#</a> get|post|put|delete|options</h3> <div class="language- extra-class"><pre class="language-text"><code>$router-&gt;get('/about', function() {
+    echo 'About Page Contents';
+}); 
+
+$router-&gt;get('/hello/(\w+)', function($name) {
+    echo 'Hello ' . htmlentities($name);
+});
+
+$router-&gt;get('/movies/(\d+)/photos/(\d+)', function($movieId, $photoId) {
+    echo 'Movie #' . $movieId . ', photo #' . $photoId;
+});
+
+$router-&gt;get(
+    '/blog(/\d+)?(/\d+)?(/\d+)?(/[a-z0-9_-]+)?',
+    function($year = null, $month = null, $day = null, $slug = null) {
+        if (!$year) { echo 'Blog overview'; return; }
+        if (!$month) { echo 'Blog year overview'; return; }
+        if (!$day) { echo 'Blog month overview'; return; }
+        if (!$slug) { echo 'Blog day overview'; return; }
+        echo 'Blogpost ' . htmlentities($slug) . ' detail';
+    }
+);
+
+$router-&gt;get('/blog(/\d{4}(/\d{2}(/\d{2}(/[a-z0-9_-]+)?)?)?)?', function($year = null, $month = null, $day = null, $slug = null) {
+    // ...
+});
+</code></pre></div><p>正则说明</p> <div class="language- extra-class"><pre class="language-text"><code>\d+  One or more digits (0-9)
+\w+   One or more word characters (a-z 0-9 _)
+[a-z0-9_-]+  One or more word characters (a-z 0-9 _) and the dash (-)
+.*   Any character (including /), zero or more
+[^/]+   Any character but /, one or more
+</code></pre></div><h3 id="namespace"><a href="#namespace" class="header-anchor">#</a> namespace</h3> <div class="language- extra-class"><pre class="language-text"><code>$router-&gt;setNamespace('\App\Controllers');
+$router-&gt;get('/users/(\d+)', 'User@showProfile');
+$router-&gt;get('/cars/(\d+)', 'Car@showProfile');
+</code></pre></div><h3 id="_404"><a href="#_404" class="header-anchor">#</a> 404</h3> <div class="language- extra-class"><pre class="language-text"><code>$router-&gt;set404('\App\Controllers\Error@notFound');
+</code></pre></div><h3 id="middlewares"><a href="#middlewares" class="header-anchor">#</a> Middlewares</h3> <div class="language- extra-class"><pre class="language-text"><code>$router-&gt;before('GET|POST', '/admin/.*', function() {
+    if (!isset($_SESSION['user'])) {
+        header('location: /auth/login');
+        exit();
+    }
+});
+
+$router-&gt;before('GET', '/.*', function() {
+    // ... this will always be executed
+});
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/vue.html" class="prev">
+        Vue类
+      </a></span> <span class="next"><a href="/guide/validate.html">
+        数据验证
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0c99f908.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/18.99a53d40.js" defer></script>
+  </body>
+</html>
